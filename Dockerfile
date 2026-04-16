@@ -241,7 +241,7 @@ RUN set -eux \
     && PAPERLESS_SECRET_KEY=build-time-dummy s6-setuidgid paperless python3 manage.py compilemessages \
     && /usr/local/bin/deduplicate.py --verbose /usr/src/paperless/static/
 
-VOLUME ["/usr/src/paperless/data", \
+#VOLUME ["/usr/src/paperless/data", \
         "/usr/src/paperless/media", \
         "/usr/src/paperless/consume", \
         "/usr/src/paperless/export"]
